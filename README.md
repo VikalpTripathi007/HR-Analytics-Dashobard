@@ -38,12 +38,4 @@ Understanding structural demographics and employee attrition is critical to mini
 * **Power BI Desktop:** Core platform used for data modeling, analytical engineering, and data visual engineering.
 * **Power Query Editor:** Utilized for data ingest cleaning pipelines, conditional columns generation, standard typecasting, and semantic profiling.
 * **DAX (Data Analysis Expressions):** Engineered explicitly for writing robust semantic model measures and custom filter evaluation contexts.
-ActiveEmployees = CALCULATE(COUNT(FactEmployee[EmployeeID]), FactEmployee[Attrition] = "No")
-AttritionRate = DIVIDE(
-    CALCULATE(COUNT(FactEmployee[EmployeeID]), FactEmployee[Attrition] = "Yes"),
-    [TotalHeadcount],
-    0
-)AvgJobSatisfaction = AVERAGE(FactEmployee[JobSatisfaction])
----
-
-## 🔄 System ArchitectureActiveEmployees = CALCULATE(COUNT(FactEmployee[EmployeeID]), FactEmployee[Attrition] = "No")
+COUNT(FactEmployee[EmployeeID]), FactEmployee[Attrition] = "No")
